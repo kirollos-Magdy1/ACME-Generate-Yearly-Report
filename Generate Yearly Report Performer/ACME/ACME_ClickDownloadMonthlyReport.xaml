@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ACME_NavigateToReportsDownload" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1058.4,4196" sap2010:WorkflowViewState.IdRef="ACME_NavigateToReportsDownload_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ACME_NavigateToReportsDownload" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="818.4,2359.2" sap2010:WorkflowViewState.IdRef="ACME_NavigateToReportsDownload_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -69,7 +69,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Desc: Open the Donwload Monthly Report page&#xA;&#xA;PreConditions: User Logged in&#xA;&#xA;PostConditions: &quot;Download Monthly Report&quot; Header Exists&#xA;&#xA;inArg:&#xA;&#xA;outArg:" DisplayName="ACME_NavigateToReportsDownload" sap:VirtualizedContainerService.HintSize="715.2,4131.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+  <Sequence sap2010:Annotation.AnnotationText="Desc: Open the Donwload Monthly Report page&#xA;&#xA;PreConditions: User Logged in&#xA;&#xA;PostConditions: &quot;Download Monthly Report&quot; Page Exists&#xA;&#xA;inArg:&#xA;&#xA;outArg:" DisplayName="ACME_NavigateToReportsDownload" sap:VirtualizedContainerService.HintSize="715.2,2294.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="ACME_NavigateToReportsDownload" Name="strFileName" />
     </Sequence.Variables>
@@ -79,30 +79,30 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="652.8,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Starting Opening &quot; + strFileName]" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="652.8,3538.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="652.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Starting Opening &quot; + strFileName]" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="652.8,1709.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="616,3244" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:05">
+        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="616,1423.2" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:05">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <Sequence DisplayName="App_Action" sap:VirtualizedContainerService.HintSize="574.4,3068" sap2010:WorkflowViewState.IdRef="Sequence_26">
+              <Sequence DisplayName="App_Action" sap:VirtualizedContainerService.HintSize="574.4,1247.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="PreCondition" sap:VirtualizedContainerService.HintSize="512,1072" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                <Sequence DisplayName="PreCondition" sap:VirtualizedContainerService.HintSize="512,56.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="boolDashboardHeaderExists" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:UiElementExists DisplayName="Element Exists 'H1'" Exists="[boolDashboardHeaderExists]" sap:VirtualizedContainerService.HintSize="449.6,147.2" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                  <ui:UiElementExists DisplayName="Element Exists 'H1'" Exists="[boolDashboardHeaderExists]" sap:VirtualizedContainerService.HintSize="449.6,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f2ac06e6-44f0-44ae-ae29-fbdfb80775f8" InformativeScreenshot="fe003c31b434c1b28d8b13c0189cd639" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;&lt;webctrl tag='H1' visibleinnertext='Dashboard' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -138,17 +138,17 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,854.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,56.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Default="https://acme-test.uipath.com/reports/download" Name="strDownloadReportsURL" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'ACME'" sap:VirtualizedContainerService.HintSize="449.6,702.4" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="ea8239efa81342a82f513f9f709437c8" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'ACME'" sap:VirtualizedContainerService.HintSize="449.6,725.6" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="ea8239efa81342a82f513f9f709437c8" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -228,7 +228,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:BrowserScope>
                 </Sequence>
-                <Sequence DisplayName="PostCondition" sap:VirtualizedContainerService.HintSize="512,1055.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <Sequence DisplayName="PostCondition" sap:VirtualizedContainerService.HintSize="512,1047.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="boolDownloadMonthlyReportHeaderExists" />
                   </Sequence.Variables>
@@ -238,7 +238,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:UiElementExists DisplayName="Element Exists 'H1'" Exists="[boolDownloadMonthlyReportHeaderExists]" sap:VirtualizedContainerService.HintSize="449.6,147.2" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                  <ui:UiElementExists DisplayName="Element Exists 'H1'" Exists="[boolDownloadMonthlyReportHeaderExists]" sap:VirtualizedContainerService.HintSize="449.6,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f2ac06e6-44f0-44ae-ae29-fbdfb80775f8" InformativeScreenshot="4c0d3f6378575ed640c6d0aa3a9fe200" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;&lt;webctrl tag='H1' visibleinnertext='Reports - Download Monthly Report' /&gt;">
                         <ui:Target.TimeoutMS>

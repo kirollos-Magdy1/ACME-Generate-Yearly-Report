@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>864,2674.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1202.4,3239.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ACME_NavigateToWorkItemDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -86,7 +86,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Desc: Open the work item details page&#xA;&#xA;PreConditions: User Logged in&#xA;&#xA;PostConditions: &quot;Update Work Item&quot; button exists&#xA;&#xA;inArg: &#xA;in_strActionUrl&#xA;&#xA;outArg:" DisplayName="ACME_NavigateToWorkItemDetails" sap:VirtualizedContainerService.HintSize="715.2,3230.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Desc: Open the work item details page&#xA;&#xA;PreConditions: User Logged in&#xA;&#xA;PostConditions: &quot;Update Work Item&quot; button exists&#xA;&#xA;inArg: &#xA;in_strActionUrl&#xA;&#xA;outArg:" DisplayName="ACME_NavigateToWorkItemDetails" sap:VirtualizedContainerService.HintSize="715.2,3174.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="ACME_NavigateToWorkItemDetails" Name="strFileName" />
     </Sequence.Variables>
@@ -96,20 +96,20 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="652.8,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Starting Opening &quot; + strFileName]" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="652.8,2621.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="652.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Starting Opening &quot; + strFileName]" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="652.8,2573.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="616,2327.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:05">
+        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="616,2287.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:05">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <Sequence DisplayName="App_Action" sap:VirtualizedContainerService.HintSize="574.4,2151.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence DisplayName="App_Action" sap:VirtualizedContainerService.HintSize="574.4,2111.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="PreCondition" sap:VirtualizedContainerService.HintSize="512,324" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <Sequence DisplayName="PreCondition" sap:VirtualizedContainerService.HintSize="512,308" sap2010:WorkflowViewState.IdRef="Sequence_16">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="boolLogoutButton" />
                   </Sequence.Variables>
@@ -119,7 +119,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:UiElementExists DisplayName="Element Exists 'Logout Button'" Exists="[boolLogoutButton]" sap:VirtualizedContainerService.HintSize="387.2,147.2" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                  <ui:UiElementExists DisplayName="Element Exists 'Logout Button'" Exists="[boolLogoutButton]" sap:VirtualizedContainerService.HintSize="387.2,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f403fa59-b025-4722-80a2-e77deb75b86a" InformativeScreenshot="23699c8ff3d412b5d53edb202dc83b4f" Selector="&lt;html app='chrome.exe' title='ACME System 1*' /&gt;&lt;webctrl aaname='Log Out' tag='A' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -161,7 +161,7 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,685.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,661.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Default="https://acme-test.uipath.com/reports/download" Name="strDownloadReportsURL" />
                   </Sequence.Variables>
@@ -171,19 +171,19 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'ACME'" sap:VirtualizedContainerService.HintSize="449.6,556.8" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="e83ad570d5160a1f4e6b35e118a39129" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'ACME'" sap:VirtualizedContainerService.HintSize="449.6,540.8" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="e83ad570d5160a1f4e6b35e118a39129" Selector="&lt;html app='chrome.exe' title='ACME System 1 - *' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,386.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,370.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="353.6,126.4" sap2010:WorkflowViewState.IdRef="Activate_2">
+                          <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="353.6,118.4" sap2010:WorkflowViewState.IdRef="Activate_2">
                             <ui:Activate.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="2a979a1b-fe66-401d-bc3f-85e51422f0ee">
                                 <ui:Target.TimeoutMS>
@@ -195,7 +195,7 @@
                               </ui:Target>
                             </ui:Activate.Target>
                           </ui:Activate>
-                          <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="353.6,64.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+                          <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
                           <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="353.6,108.8" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[in_strActionUrl]" />
                         </Sequence>
                       </ActivityAction>

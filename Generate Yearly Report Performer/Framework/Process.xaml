@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>674.4,2364</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>818.4,2260</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -113,7 +113,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="416,2299.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="416,2195.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="RO125678" Name="strTaxID" />
       <Variable x:TypeArguments="x:String" Name="tst" />
@@ -128,8 +128,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <Flowchart DisplayName="Process Flowchart" sap:VirtualizedContainerService.HintSize="353.6,64.8" sap2010:WorkflowViewState.IdRef="Flowchart_5">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <Flowchart DisplayName="Process Flowchart" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="Flowchart_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -229,31 +229,27 @@
       <x:Reference>__ReferenceID2</x:Reference>
       <x:Reference>__ReferenceID3</x:Reference>
     </Flowchart>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_NavigateToWorkItemDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="ACME\ACME_NavigateToWorkItemDetails.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_NavigateToWorkItemDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="ACME\ACME_NavigateToWorkItemDetails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strActionUrl">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_TransactionItem.SpecificContent(&quot;URL&quot;).ToString" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strActionUrl">[in_TransactionItem.SpecificContent("URL").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_ExtractVendorTaxID.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="ACME\ACME_ExtractVendorTaxID.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_ExtractVendorTaxID.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="ACME\ACME_ExtractVendorTaxID.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_strTaxID">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strTaxID" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strTaxID">[strTaxID]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_NavigateToDashboard.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="ACME\ACME_NavigateToDashboard.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_NavigateToDashboard.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="ACME\ACME_NavigateToDashboard.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_ClickDownloadMonthlyReport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="ACME\ACME_ClickDownloadMonthlyReport.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_ClickDownloadMonthlyReport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="ACME\ACME_ClickDownloadMonthlyReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_DownloadMonthlyReports.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="ACME\ACME_DownloadMonthlyReports.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_DownloadMonthlyReports.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="ACME\ACME_DownloadMonthlyReports.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_strYear">[strYear]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strTaxID">[strTaxID]</InArgument>
@@ -263,7 +259,7 @@
         <InArgument x:TypeArguments="x:Int32" x:Key="in_intTimeOutShort">[CInt(in_Config("TimeoutS"))]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_CreateYearlyReport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="ACME\ACME_CreateYearlyReport.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_CreateYearlyReport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="ACME\ACME_CreateYearlyReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtYearData">[dtYearData]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_strTaxID">[strTaxID]</InArgument>
@@ -272,33 +268,41 @@
         <OutArgument x:TypeArguments="x:String" x:Key="out_strYearReportFileName">[strYearReportFileName]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_NavigateToDashboard.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="ACME\ACME_NavigateToDashboard.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_NavigateToDashboard.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="ACME\ACME_NavigateToDashboard.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_ClickUploadYearlyReport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="ACME\ACME_ClickUploadYearlyReport.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_ClickUploadYearlyReport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="ACME\ACME_ClickUploadYearlyReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_UploadYearReportFile.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="ACME\ACME_UploadYearReportFile.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_UploadYearReportFile.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="ACME\ACME_UploadYearReportFile.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strTaxID">[strTaxID]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strYear">[strYear]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strYearReportDirectory">[Path.Combine(Directory.GetCurrentDirectory(),"Data","Output")]</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_strUploadID">[strUploadID]</OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strYearReportFileName">[strYearReportFileName]</InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_NavigateToWorkItemDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="ACME\ACME_NavigateToWorkItemDetails.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strActionUrl">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_TransactionItem.SpecificContent(&quot;URL&quot;).ToString" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_strTaxID">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strTaxID" />
         </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strYear">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strYear" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strYearReportDirectory">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Path.Combine(Directory.GetCurrentDirectory(),&quot;Data&quot;,&quot;Output&quot;)" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strYearReportFileName">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strYearReportFileName" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strUploadID">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strUploadID" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_UpdateWorkItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="ACME\ACME_UpdateWorkItem.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_NavigateToWorkItemDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="ACME\ACME_NavigateToWorkItemDetails.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strActionUrl">[in_TransactionItem.SpecificContent("URL").ToString]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ACME\ACME_UpdateWorkItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="ACME\ACME_UpdateWorkItem.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_strUploadID">[strUploadID]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
